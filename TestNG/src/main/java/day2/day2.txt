@@ -1,0 +1,86 @@
+Objective of day2
+=================
+==> execute specific methods in a specific class, for this type of execution we can use 
+	<include> inside the <methods> which is inside <class> inside the xml file
+
+
+How to create testNG class
+==========================
+
+To create a TestNG class in Eclipse, 
+first ensure that the TestNG plugin is installed via the Eclipse Marketplace 
+or by adding the TestNG library through the project's build path.
+ Once set up, navigate to the project's src folder, 
+ right-click on the desired package, and select New > Other from the context menu.
+ In the dialog that appears, choose TestNG Class under the TestNG category.
+ The source folder and package name will be prepopulated; enter a class name (e.g., Test1) 
+ and optionally select annotations like @BeforeMethod and @AfterMethod to include setup and teardown methods.
+ Click Finish to generate the class, which will include a default f() method, beforeMethod(), 
+ and afterMethod() if selected, along with necessary imports.
+ Alternatively, you can use the shortcut Ctrl+N, select TestNG Class, and follow the same steps.
+ 
+ How to create testNg.xml
+ ========================
+ 
+ There are two primary methods to create a testng.xml file in Eclipse.
+
+first method
+------------
+The first method involves manually creating the file. 
+Right-click on your project folder in the Project Explorer, 
+select New, then File. Name the file testng.xml and click Finish. 
+This will create an empty XML file in your project. 
+You can then add the necessary TestNG suite configuration, 
+such as defining the suite name, test name, 
+and including specific test classes using the <suite>, <test>, and <classes> tags.
+ 
+ A basic example includes the following structure:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="practice.SampleTest"/>
+    </classes>
+  </test>
+</suite>
+
+
+second method
+-------------
+The second and often preferred method is using Eclipse’s built-in Convert to TestNG feature. 
+Right-click on your project folder in the Project Explorer, navigate to TestNG, and select Convert to TestNG.
+ A dialog will appear prompting you to configure the test suite. After clicking Finish, 
+ Eclipse will automatically generate a testng.xml file in your project directory with default settings 
+ based on your existing test classes.
+ You can then open and modify this file to include or exclude specific classes, methods, 
+ or packages, set test dependencies, define parallel execution, or adjust priorities.
+ 
+ =======================================================================
+ 
+ [ERROR] ==> Downloading from external resources is disabled in hibernate dtd
+ ============================================================================
+ The "Downloading external resources is disabled" error in a TestNG.xml file typically occurs 
+ when Eclipse is unable to access external DTD or XSD files required for XML validation and code assistance. 
+ This issue is commonly linked to disabled download settings within Eclipse's preferences.
+
+To resolve this, navigate to Window > Preferences > XML (Wild Web Developer) 
+and ensure the "Download external resources like referenced DTD, XSD" option is checked.
+ This setting allows Eclipse to fetch necessary schema definitions from remote sources, 
+ which is essential for proper validation of the TestNG.xml file.
+
+Alternatively, if the issue persists, check the Maven settings under Window > Preferences > Maven and 
+ensure that "Download artifact sources" and "Download artifact JavaDoc" are enabled.
+ These settings can influence the availability of external resources during project builds and validations.
+
+For users encountering this error specifically in the context of TestNG and Maven projects, 
+enabling these download options should resolve the warning and allow proper XML file processing.
+ If network or proxy settings are interfering, verify the Network Connections settings 
+ under Window > Preferences > General > Network Connections and ensure a direct connection is used 
+ instead of a manual proxy configuration.
+ 
+ https://stackoverflow.com/questions/77252112/downloading-from-external-resources-is-disabled-in-hibernate-dtd
+ 
+ =======================================================================================================
+ 

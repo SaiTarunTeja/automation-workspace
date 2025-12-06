@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="3" total="11" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-06T20:27:57 IST" name="Suite" finished-at="2025-12-06T20:28:54 IST" duration-ms="57304">
+    <groups>
+    </groups>
+    <test started-at="2025-12-06T20:27:57 IST" name="OrangeHRMLogin" finished-at="2025-12-06T20:27:57 IST" duration-ms="64">
+      <class name="day2.OrangeHRM">
+        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="beforeTest" finished-at="2025-12-06T20:27:57 IST" duration-ms="12" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@77602954]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="LaunchApp()[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="LaunchApp" finished-at="2025-12-06T20:27:57 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApp -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="EnterLoginDetails()[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="EnterLoginDetails" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnterLoginDetails -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="VerifyLogin()[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="VerifyLogin" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLogin -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- day2.OrangeHRM -->
+    </test> <!-- OrangeHRMLogin -->
+    <test started-at="2025-12-06T20:27:57 IST" name="OrangeHRMVerifyLogin" finished-at="2025-12-06T20:27:57 IST" duration-ms="15">
+      <class name="day2.OrangeHRM">
+        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="beforeTest" finished-at="2025-12-06T20:27:57 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@e260766]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="LaunchApp()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="LaunchApp" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApp -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="EnterLoginDetails()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="EnterLoginDetails" finished-at="2025-12-06T20:27:57 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnterLoginDetails -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="NavigateToMyInfo()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="NavigateToMyInfo" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToMyInfo -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="VerifyMyInfo()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="VerifyMyInfo" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyMyInfo -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- day2.OrangeHRM -->
+    </test> <!-- OrangeHRMVerifyLogin -->
+    <test started-at="2025-12-06T20:27:57 IST" name="openGoogle" finished-at="2025-12-06T20:28:54 IST" duration-ms="57168">
+      <class name="day2.FirstClass">
+        <test-method signature="openGoogle()[pri:0, instance:day2.FirstClass@69453e37]" started-at="2025-12-06T20:27:57 IST" name="openGoogle" finished-at="2025-12-06T20:28:54 IST" duration-ms="57164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openGoogle -->
+      </class> <!-- day2.FirstClass -->
+    </test> <!-- openGoogle -->
+  </suite> <!-- Suite -->
+</testng-results>
