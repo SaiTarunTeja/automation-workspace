@@ -1,7 +1,6 @@
 Objective of day2
 =================
-==> execute specific methods in a specific class, for this type of execution we can use 
-	<include> inside the <methods> which is inside <class> inside the xml file
+==> To execute specific methods in a specific class, we can use <include> inside the <methods> tag, which is inside the <class> tag in the TestNG XML file.
 
 
 How to create testNG class
