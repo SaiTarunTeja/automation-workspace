@@ -1,103 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="11" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[assertEquals(actual, expected) ==> Actual: 16
+           Expected: 16]]>
+    </line>
+    <line>
+      <![CDATA[assertEquals(actual, expected, message) ==> 
+actual and expected both are equal
+Actual: 16
+Expected: 16]]>
+    </line>
+    <line>
+      <![CDATA[assertEqualsNoOrder(actualArray, expectedArray) ==> Actual: [b, a, c]
+           Expected: [a, b, c]]]>
+    </line>
+    <line>
+      <![CDATA[assertEqualsNoOrder(actualArray, expectedArray, msg) ==> 
+Both actual and expected are Equal
+Actual: [b, a, c]
+Expected: [a, b, c]]]>
+    </line>
+    <line>
+      <![CDATA[assertNotEquals(actual, expected) ==> Actual: 11
+           Expected: 12]]>
+    </line>
+    <line>
+      <![CDATA[assertNotEquals(actual, expected, message) ==> 
+actual and expected both are not equal
+Actual: 11
+Expected: 12]]>
+    </line>
+    <line>
+      <![CDATA[Arrays are equal but expected them to be different]]>
+    </line>
+    <line>
+      <![CDATA[Arrays are NOT equal, as expected. Test passes.]]>
+    </line>
+    <line>
+      <![CDATA[assertEqualsNoOrder(actualArray, expectedArray) ==> Actual: [b, a, c]
+           Expected: [a, b, c]]]>
+    </line>
   </reporter-output>
-  <suite started-at="2025-12-06T20:27:57 IST" name="Suite" finished-at="2025-12-06T20:28:54 IST" duration-ms="57304">
+  <suite started-at="2025-12-09T22:54:15 IST" name="Default suite" finished-at="2025-12-09T22:54:15 IST" duration-ms="51">
     <groups>
     </groups>
-    <test started-at="2025-12-06T20:27:57 IST" name="OrangeHRMLogin" finished-at="2025-12-06T20:27:57 IST" duration-ms="64">
-      <class name="day2.OrangeHRM">
-        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="beforeTest" finished-at="2025-12-06T20:27:57 IST" duration-ms="12" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@77602954]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-12-09T22:54:15 IST" name="Default test" finished-at="2025-12-09T22:54:15 IST" duration-ms="51">
+      <class name="day3.AssertionsPractice">
+        <test-method signature="equalityAssertions()[pri:0, instance:day3.AssertionsPractice@2d901eb0]" started-at="2025-12-09T22:54:15 IST" name="equalityAssertions" finished-at="2025-12-09T22:54:15 IST" duration-ms="11" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[assertEquals(actual, expected) ==> Actual: 16
+           Expected: 16]]>
+            </line>
+            <line>
+              <![CDATA[assertEquals(actual, expected, message) ==> 
+actual and expected both are equal
+Actual: 16
+Expected: 16]]>
+            </line>
+            <line>
+              <![CDATA[assertEqualsNoOrder(actualArray, expectedArray) ==> Actual: [b, a, c]
+           Expected: [a, b, c]]]>
+            </line>
+            <line>
+              <![CDATA[assertEqualsNoOrder(actualArray, expectedArray, msg) ==> 
+Both actual and expected are Equal
+Actual: [b, a, c]
+Expected: [a, b, c]]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="LaunchApp()[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="LaunchApp" finished-at="2025-12-06T20:27:57 IST" duration-ms="6" status="PASS">
+        </test-method> <!-- equalityAssertions -->
+        <test-method signature="notEqualityAssertions()[pri:0, instance:day3.AssertionsPractice@2d901eb0]" started-at="2025-12-09T22:54:15 IST" name="notEqualityAssertions" finished-at="2025-12-09T22:54:15 IST" duration-ms="4" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[assertNotEquals(actual, expected) ==> Actual: 11
+           Expected: 12]]>
+            </line>
+            <line>
+              <![CDATA[assertNotEquals(actual, expected, message) ==> 
+actual and expected both are not equal
+Actual: 11
+Expected: 12]]>
+            </line>
+            <line>
+              <![CDATA[Arrays are equal but expected them to be different]]>
+            </line>
+            <line>
+              <![CDATA[Arrays are NOT equal, as expected. Test passes.]]>
+            </line>
+            <line>
+              <![CDATA[assertEqualsNoOrder(actualArray, expectedArray) ==> Actual: [b, a, c]
+           Expected: [a, b, c]]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- LaunchApp -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="EnterLoginDetails()[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="EnterLoginDetails" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EnterLoginDetails -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="VerifyLogin()[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="VerifyLogin" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyLogin -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@7e6f74c]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- day2.OrangeHRM -->
-    </test> <!-- OrangeHRMLogin -->
-    <test started-at="2025-12-06T20:27:57 IST" name="OrangeHRMVerifyLogin" finished-at="2025-12-06T20:27:57 IST" duration-ms="15">
-      <class name="day2.OrangeHRM">
-        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="beforeTest" finished-at="2025-12-06T20:27:57 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@e260766]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="LaunchApp()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="LaunchApp" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApp -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="EnterLoginDetails()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="EnterLoginDetails" finished-at="2025-12-06T20:27:57 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EnterLoginDetails -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="NavigateToMyInfo()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="NavigateToMyInfo" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NavigateToMyInfo -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="VerifyMyInfo()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="VerifyMyInfo" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyMyInfo -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:day2.OrangeHRM@55b0dcab]" started-at="2025-12-06T20:27:57 IST" name="afterMethod" finished-at="2025-12-06T20:27:57 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- day2.OrangeHRM -->
-    </test> <!-- OrangeHRMVerifyLogin -->
-    <test started-at="2025-12-06T20:27:57 IST" name="openGoogle" finished-at="2025-12-06T20:28:54 IST" duration-ms="57168">
-      <class name="day2.FirstClass">
-        <test-method signature="openGoogle()[pri:0, instance:day2.FirstClass@69453e37]" started-at="2025-12-06T20:27:57 IST" name="openGoogle" finished-at="2025-12-06T20:28:54 IST" duration-ms="57164" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openGoogle -->
-      </class> <!-- day2.FirstClass -->
-    </test> <!-- openGoogle -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- notEqualityAssertions -->
+      </class> <!-- day3.AssertionsPractice -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

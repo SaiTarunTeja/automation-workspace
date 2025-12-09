@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Dec 06 14:54:16 IST 2025</td>
+<td>Started on:</td><td>Tue Dec 09 22:54:15 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>13 seconds (13230 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (51 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,10 +76,49 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='day1.FirstTestNGCode.openFcebook()'><b>openFcebook</b><br>Test class: day1.FirstTestNGCode</td>
+<td title='day3.AssertionsPractice.notEqualityAssertions()'><b>notEqualityAssertions</b><br>Test class: day3.AssertionsPractice<br/>
+<a href="#Output-231311211" onClick='toggleBox("Output-231311211", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-231311211" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-231311211">
+assertNotEquals(actual, expected) ==> Actual: 11
+           Expected: 12<br/>
+assertNotEquals(actual, expected, message) ==> 
+actual and expected both are not equal
+Actual: 11
+Expected: 12<br/>
+Arrays are equal but expected them to be different<br/>
+Arrays are NOT equal, as expected. Test passes.<br/>
+assertEqualsNoOrder(actualArray, expectedArray) ==> Actual: [b, a, c]
+           Expected: [a, b, c]<br/>
+</div>
+</td>
 <td></td>
-<td>13</td>
-<td>day1.FirstTestNGCode@1aafa419</td></tr>
+<td>0</td>
+<td>day3.AssertionsPractice@2d901eb0</td></tr>
+<tr>
+<td title='day3.AssertionsPractice.equalityAssertions()'><b>equalityAssertions</b><br>Test class: day3.AssertionsPractice<br/>
+<a href="#Output-237344028" onClick='toggleBox("Output-237344028", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-237344028" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-237344028">
+assertEquals(actual, expected) ==> Actual: 16
+           Expected: 16<br/>
+assertEquals(actual, expected, message) ==> 
+actual and expected both are equal
+Actual: 16
+Expected: 16<br/>
+assertEqualsNoOrder(actualArray, expectedArray) ==> Actual: [b, a, c]
+           Expected: [a, b, c]<br/>
+assertEqualsNoOrder(actualArray, expectedArray, msg) ==> 
+Both actual and expected are Equal
+Actual: [b, a, c]
+Expected: [a, b, c]<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>day3.AssertionsPractice@2d901eb0</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,7 +1,6 @@
 package day2;
 
 import org.testng.ITestContext;
-import org.testng.TestNG;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;

@@ -8,23 +8,25 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">OrangeHRMLogin</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">64</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">OrangeHRMVerifyLogin</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">15</td><td></td><td></td></tr>
-<tr><td><a href="#t2">openGoogle</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">57,168</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">8</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">57,247</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">51</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">OrangeHRMLogin &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">day2.OrangeHRM</td><td><a href="#m0">EnterLoginDetails</a></td><td rowspan="1">1765033077398</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m1">LaunchApp</a></td><td rowspan="1">1765033077387</td><td rowspan="1">6</td></tr><tr class="passedeven"><td><a href="#m2">VerifyLogin</a></td><td rowspan="1">1765033077401</td><td rowspan="1">1</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">OrangeHRMVerifyLogin &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">day2.OrangeHRM</td><td><a href="#m3">EnterLoginDetails</a></td><td rowspan="1">1765033077463</td><td rowspan="1">2</td></tr><tr class="passedeven"><td><a href="#m4">LaunchApp</a></td><td rowspan="1">1765033077460</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m5">NavigateToMyInfo</a></td><td rowspan="1">1765033077467</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m6">VerifyMyInfo</a></td><td rowspan="1">1765033077470</td><td rowspan="1">1</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">openGoogle &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">day2.FirstClass</td><td><a href="#m7">openGoogle</a></td><td rowspan="1">1765033077478</td><td rowspan="1">57164</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">day3.AssertionsPractice</td><td><a href="#m0">equalityAssertions</a></td><td rowspan="1">1765301055055</td><td rowspan="1">11</td></tr><tr class="passedeven"><td><a href="#m1">notEqualityAssertions</a></td><td rowspan="1">1765301055069</td><td rowspan="1">4</td></tr></tbody>
 </table>
-<h2>OrangeHRMLogin</h2><h3 id="m0">day2.OrangeHRM#EnterLoginDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">day2.OrangeHRM#LaunchApp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">day2.OrangeHRM#VerifyLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>OrangeHRMVerifyLogin</h2><h3 id="m3">day2.OrangeHRM#EnterLoginDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">day2.OrangeHRM#LaunchApp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">day2.OrangeHRM#NavigateToMyInfo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">day2.OrangeHRM#VerifyMyInfo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>openGoogle</h2><h3 id="m7">day2.FirstClass#openGoogle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">day3.AssertionsPractice#equalityAssertions</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">assertEquals(actual, expected) ==> Actual: 16
+           Expected: 16<br/>assertEquals(actual, expected, message) ==> 
+actual and expected both are equal
+Actual: 16
+Expected: 16<br/>assertEqualsNoOrder(actualArray, expectedArray) ==> Actual: [b, a, c]
+           Expected: [a, b, c]<br/>assertEqualsNoOrder(actualArray, expectedArray, msg) ==> 
+Both actual and expected are Equal
+Actual: [b, a, c]
+Expected: [a, b, c]</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">day3.AssertionsPractice#notEqualityAssertions</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">assertNotEquals(actual, expected) ==> Actual: 11
+           Expected: 12<br/>assertNotEquals(actual, expected, message) ==> 
+actual and expected both are not equal
+Actual: 11
+Expected: 12<br/>Arrays are equal but expected them to be different<br/>Arrays are NOT equal, as expected. Test passes.<br/>assertEqualsNoOrder(actualArray, expectedArray) ==> Actual: [b, a, c]
+           Expected: [a, b, c]</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
