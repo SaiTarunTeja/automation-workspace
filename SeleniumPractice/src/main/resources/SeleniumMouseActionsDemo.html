@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi Level Dropdown Navbar</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Navbar */
+nav{
+    background:#1e293b;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    position:relative;
+}
+
+nav ul li a{
+    display:block;
+    padding:18px 25px;
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li:hover{
+    background:#2563eb;
+}
+
+/* First Dropdown */
+nav ul li ul{
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:220px;
+    background:#334155;
+    display:none;
+    flex-direction:column;
+}
+
+nav ul li:hover > ul{
+    display:flex;
+}
+
+nav ul li ul li{
+    width:100%;
+}
+
+/* Second Dropdown */
+nav ul li ul li ul{
+    position:absolute;
+    top:0;
+    left:100%;
+    background:#475569;
+    display:none;
+}
+
+nav ul li ul li:hover > ul{
+    display:flex;
+}
+
+/* Hover Effect */
+nav ul li ul li:hover{
+    background:#3b82f6;
+}
+
+.arrow{
+    float:right;
+}
+
+/* Content */
+.container{
+    padding:40px;
+}
+
+#message{
+    margin-top:20px;
+    padding:20px;
+    background:white;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+    font-size:22px;
+    color:#1e293b;
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li>
+    <a href="#">Products ▼</a>
+
+    <ul>
+
+        <li>
+            <a href="#">Electronics <span class="arrow">▶</span></a>
+
+            <ul>
+                <li><a href="#" class="menu-item">Mobiles</a></li>
+                <li><a href="#" class="menu-item">Laptops</a></li>
+                <li><a href="#" class="menu-item">Smart Watches</a></li>
+                <li><a href="#" class="menu-item">Headphones</a></li>
+            </ul>
+
+        </li>
+
+        <li>
+            <a href="#">Fashion <span class="arrow">▶</span></a>
+
+            <ul>
+                <li><a href="#" class="menu-item">Men</a></li>
+                <li><a href="#" class="menu-item">Women</a></li>
+                <li><a href="#" class="menu-item">Kids</a></li>
+            </ul>
+
+        </li>
+
+        <li>
+            <a href="#">Furniture <span class="arrow">▶</span></a>
+
+            <ul>
+                <li><a href="#" class="menu-item">Beds</a></li>
+                <li><a href="#" class="menu-item">Sofas</a></li>
+                <li><a href="#" class="menu-item">Tables</a></li>
+            </ul>
+
+        </li>
+
+    </ul>
+</li>
+
+<li>
+    <a href="#">Services ▼</a>
+
+    <ul>
+
+        <li>
+            <a href="#">Web Development <span class="arrow">▶</span></a>
+
+            <ul>
+                <li><a href="#" class="menu-item">HTML</a></li>
+                <li><a href="#" class="menu-item">CSS</a></li>
+                <li><a href="#" class="menu-item">JavaScript</a></li>
+            </ul>
+
+        </li>
+
+        <li>
+            <a href="#">App Development <span class="arrow">▶</span></a>
+
+            <ul>
+                <li><a href="#" class="menu-item">Android</a></li>
+                <li><a href="#" class="menu-item">iOS</a></li>
+            </ul>
+
+        </li>
+
+    </ul>
+
+</li>
+
+<li>
+    <a href="#">Courses ▼</a>
+
+    <ul>
+
+        <li>
+            <a href="#">Programming <span class="arrow">▶</span></a>
+
+            <ul>
+                <li><a href="#" class="menu-item">Java</a></li>
+                <li><a href="#" class="menu-item">Python</a></li>
+                <li><a href="#" class="menu-item">C++</a></li>
+            </ul>
+
+        </li>
+
+        <li>
+            <a href="#">Database <span class="arrow">▶</span></a>
+
+            <ul>
+                <li><a href="#" class="menu-item">MySQL</a></li>
+                <li><a href="#" class="menu-item">Oracle</a></li>
+            </ul>
+
+        </li>
+
+    </ul>
+
+</li>
+
+<li>
+    <a href="#">Contact ▼</a>
+
+    <ul>
+
+        <li>
+            <a href="#">Email <span class="arrow">▶</span></a>
+
+            <ul>
+                <li><a href="#" class="menu-item">Support</a></li>
+                <li><a href="#" class="menu-item">Sales</a></li>
+            </ul>
+
+        </li>
+
+        <li><a href="#" class="menu-item">Location</a></li>
+        <li><a href="#" class="menu-item">Phone</a></li>
+
+    </ul>
+
+</li>
+
+</ul>
+
+</nav>
+
+<div class="container">
+
+<h1>Multi-Level Dropdown Navigation</h1>
+
+<div id="message">
+    Please select an option from the menu.
+</div>
+
+</div>
+
+<script>
+
+// Select all final submenu items
+const menuItems = document.querySelectorAll(".menu-item");
+
+// Message area
+const message = document.getElementById("message");
+
+// Add click event to each item
+menuItems.forEach(item => {
+
+    item.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        message.innerHTML = `
+            <h2>You selected <span style="color:#2563eb;">${this.textContent}</span> option.</h2>
+            <p>Thank you for your selection.</p>
+        `;
+
+    });
+
+});
+
+</script>
+<hr><br>
+
+<h1> DoubleClick Functionality</h1>
+<section name = 'doubleClickFunctionality'>
+
+Field1: <input type="text" id="field1" value="Hello World!"><br>
+Field2: <input type="text" id="field2"><br><br>
+
+<button ondblclick="myFunction()">Copy Text</button>
+
+<p>A function is triggered when the button is double-clicked. The function copies the text from Field1 into Field2.</p>
+
+<script>
+function myFunction() {
+  document.getElementById("field2").value = document.getElementById("field1").value;
+}
+</script>
+
+</section>
+<br><hr><br>
+<section name='drag and drop functionality'>
+
+<h1> Drag and drop functionality</h1>
+
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f2f5f9;
+    padding:25px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.container{
+    display:flex;
+    gap:30px;
+}
+
+.panel{
+    flex:1;
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    min-height:550px;
+}
+
+.panel h2{
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.capitals{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.capital{
+    background:#3498db;
+    color:white;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:grab;
+    user-select:none;
+    font-weight:bold;
+}
+
+.capital:active{
+    cursor:grabbing;
+}
+
+.countries{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.country{
+    height:120px;
+    border:3px dashed #999;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    font-weight:bold;
+    background:#fafafa;
+    transition:.3s;
+}
+
+.correct{
+    background:#6dd56d !important;
+    border-color:#2f8f2f;
+    color:white;
+}
+
+.wrong{
+    background:#ff8f8f !important;
+    border-color:red;
+    color:white;
+}
+</style>
+
+
+<h1>Match Capitals with Countries</h1>
+
+<div class="container">
+
+    <!-- LEFT -->
+    <div class="panel">
+        <h2>Capitals</h2>
+
+        <div class="capitals">
+
+            <div class="capital" draggable="true" data-country="India">Delhi</div>
+
+            <div class="capital" draggable="true" data-country="Japan">Tokyo</div>
+
+            <div class="capital" draggable="true" data-country="France">Paris</div>
+
+            <div class="capital" draggable="true" data-country="Australia">Canberra</div>
+
+            <div class="capital" draggable="true" data-country="Brazil">Brasília</div>
+
+            <div class="capital" draggable="true" data-country="Canada">Ottawa</div>
+
+        </div>
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="panel">
+        <h2>Countries</h2>
+
+        <div class="countries">
+
+            <div class="country" data-country="India">India</div>
+
+            <div class="country" data-country="Japan">Japan</div>
+
+            <div class="country" data-country="France">France</div>
+
+            <div class="country" data-country="Australia">Australia</div>
+
+            <div class="country" data-country="Brazil">Brazil</div>
+
+            <div class="country" data-country="Canada">Canada</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+let draggedItem = null;
+
+// Drag Start
+document.querySelectorAll(".capital").forEach(capital=>{
+
+    capital.addEventListener("dragstart",function(){
+        draggedItem=this;
+    });
+
+});
+
+// Country events
+document.querySelectorAll(".country").forEach(country=>{
+
+    country.addEventListener("dragover",function(e){
+        e.preventDefault();
+    });
+
+    country.addEventListener("drop",function(e){
+        e.preventDefault();
+
+        if(!draggedItem) return;
+
+        const capitalCountry = draggedItem.dataset.country;
+        const targetCountry = this.dataset.country;
+
+        if(capitalCountry===targetCountry){
+
+            this.classList.remove("wrong");
+            this.classList.add("correct");
+
+            this.innerHTML = `
+                <div>
+                    <div>${targetCountry}</div>
+                    <small>${draggedItem.textContent}</small>
+                </div>
+            `;
+
+            draggedItem.remove();
+
+        }else{
+
+            this.classList.remove("correct");
+            this.classList.add("wrong");
+
+            setTimeout(()=>{
+                this.classList.remove("wrong");
+            },700);
+
+        }
+
+    });
+
+});
+
+</script>
+
+</section>
+</body>
+</html>

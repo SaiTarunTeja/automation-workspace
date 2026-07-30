@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Price Range Slider</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f4f4f4;
+}
+
+.container{
+    width:420px;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+h2{
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.price-input{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.field{
+    flex:1;
+}
+
+.field label{
+    display:block;
+    margin-bottom:6px;
+    font-size:14px;
+    color:#555;
+}
+
+.field input{
+    width:100%;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    font-size:16px;
+}
+
+.slider{
+    position:relative;
+    height:6px;
+    background:#ddd;
+    border-radius:5px;
+}
+
+.progress{
+    position:absolute;
+    height:100%;
+    background:#4f46e5;
+    border-radius:5px;
+}
+
+.range-input{
+    position:relative;
+}
+
+.range-input input{
+    position:absolute;
+    top:-6px;
+    width:100%;
+    height:6px;
+    background:none;
+    pointer-events:none;
+    appearance:none;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    appearance:none;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#4f46e5;
+    cursor:pointer;
+    pointer-events:auto;
+}
+
+input[type="range"]::-moz-range-thumb{
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#4f46e5;
+    border:none;
+    cursor:pointer;
+    pointer-events:auto;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Price Range</h2>
+
+<div class="price-input">
+    <div class="field">
+        <label>Minimum</label>
+        <input type="number" id="minPrice" value="200">
+    </div>
+
+    <div class="field">
+        <label>Maximum</label>
+        <input type="number" id="maxPrice" value="800">
+    </div>
+</div>
+
+<div class="slider">
+    <div class="progress"></div>
+</div>
+
+<div class="range-input">
+    <input type="range" id="rangeMin" min="0" max="1000" value="200">
+    <input type="range" id="rangeMax" min="0" max="1000" value="800">
+</div>
+
+</div>
+
+<script>
+const minInput = document.getElementById("minPrice");
+const maxInput = document.getElementById("maxPrice");
+
+const rangeMin = document.getElementById("rangeMin");
+const rangeMax = document.getElementById("rangeMax");
+
+const progress = document.querySelector(".progress");
+
+const gap = 50;
+
+function updateSlider(){
+    progress.style.left = (rangeMin.value / rangeMin.max) * 100 + "%";
+    progress.style.right = 100 - (rangeMax.value / rangeMax.max) * 100 + "%";
+}
+
+updateSlider();
+
+// Slider → Inputs
+rangeMin.addEventListener("input", () => {
+    if (+rangeMax.value - +rangeMin.value < gap) {
+        rangeMin.value = rangeMax.value - gap;
+    }
+
+    minInput.value = rangeMin.value;
+    updateSlider();
+});
+
+rangeMax.addEventListener("input", () => {
+    if (+rangeMax.value - +rangeMin.value < gap) {
+        rangeMax.value = +rangeMin.value + gap;
+    }
+
+    maxInput.value = rangeMax.value;
+    updateSlider();
+});
+
+// Inputs → Slider
+minInput.addEventListener("input", () => {
+    let value = Math.min(+minInput.value, +rangeMax.value - gap);
+    value = Math.max(0, value);
+
+    rangeMin.value = value;
+    minInput.value = value;
+    updateSlider();
+});
+
+maxInput.addEventListener("input", () => {
+    let value = Math.max(+maxInput.value, +rangeMin.value + gap);
+    value = Math.min(1000, value);
+
+    rangeMax.value = value;
+    maxInput.value = value;
+    updateSlider();
+});
+</script>
+
+</body>
+</html>
